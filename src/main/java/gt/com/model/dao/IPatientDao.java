@@ -18,5 +18,7 @@ public interface IPatientDao {
 
     public int updatePatient(PatientEntity patient) throws SQLException;
 
+    public PatientEntity getPatientById(int id) throws  SQLException;
+
 
 }

@@ -22,7 +22,16 @@ public class PatientController {
     @GetMapping(value = "/patient", produces = "application/json")
     public ResponsePatientDto readPatient(HttpServletRequest request){
         IPatientService patientService = new PatientService();
-        return patientService.getPatients();
+        try {
+            request.getParameter("idPatient").isEmpty();
+        }catch (NullPointerException ex){
+
+        }
+        if (!request.getParameter("idPatient").isEmpty()){
+            return patientService.getPatientById(Integer.parseInt(request.getParameter("idPatient")));
+        }else {
+            return patientService.getPatients();
+        }
     }
 
     @PostMapping(value = "/patient", produces = "application/json")

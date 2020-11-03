@@ -142,4 +142,32 @@ public class PatientService implements IPatientService{
         }
 
     }
+
+    @Override
+    public ResponsePatientDto getPatientById(int id) {
+
+        JsonObject jsonObject;
+        JsonObject respuesta = new JsonObject();
+        Gson gson = new Gson();
+        IPatientDao patientDao = new PatientDao();
+        PatientEntity  patient = null;
+
+
+        try {
+            patient = patientDao.getPatientById(id);
+        } catch (SQLException throwables) {
+            return new ResponsePatientDto(SQL_ERROR_QUERY);
+        }
+
+        if (patient == null){
+            return new ResponsePatientDto(SQL_NOT_PATIETN);
+        }
+        else{
+            String json = gson.toJson(patient);
+            jsonObject = new JsonParser().parse(json).getAsJsonObject();
+
+            return new ResponsePatientDto(true,patient);
+        }
+
+    }
 }

@@ -14,5 +14,6 @@ public interface IPatientService {
     public ResponsePatientDto savePatient(PatientEntity patient) throws Exception;
     public ResponsePatientDto deletePatient(int idPatient);
     public ResponsePatientDto updatePatient(HttpServletRequest request);
+    public ResponsePatientDto getPatientById(int id);
 
 }

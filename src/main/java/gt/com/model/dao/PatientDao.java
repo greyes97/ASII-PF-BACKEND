@@ -113,4 +113,39 @@ public class PatientDao implements IPatientDao {
         return 1;
     }
 
+    @Override
+    public PatientEntity getPatientById(int id) throws SQLException {
+        ConexionSingleton conection = ConexionSingleton.getInstance();
+
+        PatientEntity patient = new PatientEntity();
+        try{
+            conection.abrirConexion();
+
+            String query = String.format("select idPatient,dpi,nit,birthday,gender,fullName,surName,address,phone,emergencyContact from patients where idPatient = %d;",id);
+            ResultSet rs = conection.conexionBD.createStatement().executeQuery(query);
+
+            while (rs.next()){
+                patient.setId_user(Integer.parseInt(rs.getString("idPatient")));
+                patient.setDpi(Integer.parseInt(rs.getString("dpi")));
+                patient.setNit(rs.getString("nit"));
+                patient.setBirthdate(rs.getDate("birthday"));
+                patient.setGender(rs.getString("gender").charAt(0));
+                patient.setFullName(rs.getString("fullName"));
+                patient.setSurName(rs.getString("surName"));
+                patient.setAddress(rs.getString("address"));
+                patient.setPhone(Integer.parseInt(rs.getString("phone")));
+                patient.setEmergencyContact(Integer.parseInt(rs.getString("emergencyContact")));
+            }
+
+        }catch (SQLException ex){
+            throw ex;
+
+        }finally {
+            conection.cerrarConexion();
+        }
+
+        return patient;
+    }
+
+
 }
