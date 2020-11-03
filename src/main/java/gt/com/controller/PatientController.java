@@ -56,7 +56,6 @@ public class PatientController {
     @PutMapping(value = "/patient", produces = "application/json")
     public ResponseDto updatePatientInfo(HttpServletRequest request) {
         IPatientService patientService = new PatientService();
-
         try {
             return new ResponseDto(patientService.updatePatient(request));
         } catch (Exception e) {

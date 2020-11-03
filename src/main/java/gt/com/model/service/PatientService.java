@@ -96,6 +96,7 @@ public class PatientService implements IPatientService{
         Date birthdayParameter = null;
 
         PatientEntity patient = new PatientEntity();
+
         if (request.getParameter("idPatient") != null){
             patient.setId_user(Integer.parseInt(request.getParameter("id_patient")));
         }

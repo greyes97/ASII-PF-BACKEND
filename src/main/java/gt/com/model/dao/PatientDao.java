@@ -79,6 +79,7 @@ public class PatientDao implements IPatientDao {
     }
 
     public int updatePatient(PatientEntity patient) throws SQLException {
+
         ConexionSingleton conection = ConexionSingleton.getInstance();
         PreparedStatement parametro;
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
