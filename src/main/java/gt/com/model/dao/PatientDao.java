@@ -35,17 +35,11 @@ public class PatientDao implements IPatientDao {
             System.out.println(query);
              rs = conection.conexionBD.createStatement().execute(query);
             System.out.println(rs);
-
-
-
+            
         }catch (SQLException ex){
             throw ex;
-
         }
-        System.out.println("----**");
-        System.out.println(rs);
         return rs;
-
     }
 
     public List<PatientEntity> getPacients() throws SQLException {
