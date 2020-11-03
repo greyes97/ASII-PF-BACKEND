@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"gt.com.control"})
+@ComponentScan(basePackages = {"gt.com.controller"})
 public class HospitalApplication {
 
     public static void main(String[] args) {

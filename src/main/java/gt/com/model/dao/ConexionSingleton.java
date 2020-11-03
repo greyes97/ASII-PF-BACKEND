@@ -1,4 +1,4 @@
-package gt.com.model.Dao;
+package gt.com.model.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
