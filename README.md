@@ -66,21 +66,21 @@ usuario a su aplicación, informando el parámetro de código.
 	
 * Response 200 (application/json)
 
-
-    "message": "success",
-    "responsePatient": 
-			{
-				"idPatient": 74,
-				"dpi": "7878880005888",
-				"nit": "878978978",
-				"birthday": "2020-11-17",
-				"gender": "m",
-				"fullName": "Angel",
-				"surName": "Garcia Reyes",
-				"address": "Guatemala",
-				"phone": 98956526,
-				"emergencyContact": 78545785,
-				"statePatient": false,
-				"statusWait": false
-			},
+	+
+		"message": "success",
+		"responsePatient": 
+				{
+					"idPatient": 74,
+					"dpi": "7878880005888",
+					"nit": "878978978",
+					"birthday": "2020-11-17",
+					"gender": "m",
+					"fullName": "Angel",
+					"surName": "Garcia Reyes",
+					"address": "Guatemala",
+					"phone": 98956526,
+					"emergencyContact": 78545785,
+					"statePatient": false,
+					"statusWait": false
+				},
         
