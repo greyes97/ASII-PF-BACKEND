@@ -26,3 +26,17 @@ Las solicitudes de la API deben seguir los estándares siguientes:
 | POST  | Se utiliza para crear un nuevo registro. |
 | PUT  | Actualiza los datos de un registro o cambia su estado. |
 | DELETE  |Elimina un registro del sistema. |
+
+
+## Manejo de Respuestas
+
+| codigo| Descripcion |
+| ------------- | ------------- |
+| 200 | Solicitud ejecutada con éxito. |
+| 400  | Los errores de validación o los campos informados no existen en el sistema. |
+| 401  | Datos de acceso no válidos. |
+| 404 |Registro no encontrado. |
+| 405 |Método no implementado. |
+| 410 | El registro buscado se ha eliminado del sistema y ya no está disponible. |
+| 420 |Los datos reportados están fuera del alcance definido para el campo. |
+| 422 |Se alcanzó el número máximo de solicitudes. (espera unos segundos y vuelve a intentarlo) |
