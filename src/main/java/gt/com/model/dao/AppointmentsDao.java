@@ -2,19 +2,17 @@ package gt.com.model.dao;
 
 import gt.com.model.entity.AppointmentEntity;
 
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Time;
 import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
-import java.text.SimpleDateFormat;
 
-import static gt.com.model.configurationApp.ConfigurationApp.*;
-import static gt.com.model.configurationApp.MessagesErrorApp.*;
+import static gt.com.model.propertiesApp.ConfigurationApp.*;
+import static gt.com.model.propertiesApp.MessagesErrorApp.*;
+import  gt.com.model.propertiesApp.ConfigurationApp.*;
+
 
 public class AppointmentsDao implements IAppointmentsDao {
     private ConexionSingleton conection = ConexionSingleton.getInstance();

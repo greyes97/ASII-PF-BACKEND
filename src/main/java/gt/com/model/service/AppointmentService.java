@@ -13,7 +13,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-import static gt.com.model.configurationApp.MessagesErrorApp.*;
+
+import static gt.com.model.propertiesApp.MessagesErrorApp.SQL_ERROR_QUERY;
+import static gt.com.model.propertiesApp.MessagesErrorApp.*;
 
 public class AppointmentService implements IAppointmentService {
 
