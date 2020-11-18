@@ -40,3 +40,24 @@ Las solicitudes de la API deben seguir los estándares siguientes:
 | 410 | El registro buscado se ha eliminado del sistema y ya no está disponible. |
 | 420 |Los datos reportados están fuera del alcance definido para el campo. |
 | 422 |Se alcanzó el número máximo de solicitudes. (espera unos segundos y vuelve a intentarlo) |
+
+## Listar Datos
+
+Las acciones de la lista permiten el envío de los siguientes parámetros:
+
+| Parametro| Descripcion |
+| ------------- | ------------- |
+| Filtro | Filtra los datos por el valor ingresado. |
+
+
+## Autenticacion
+
+Para utilizar el Sistema necesita un usuario generardo por el adminitrador del mismo.
+
+Si el usuario autoriza el acceso, nuestro sistema utilizará redirect_uri para redirigir al 
+usuario a su aplicación, informando el parámetro de código.
+
+
+
+
+
