@@ -9,8 +9,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static gt.com.model.configurationApp.ConfigurationApp.INSERT_QUERY_PATIENT_ROOM;
-import static gt.com.model.configurationApp.ConfigurationApp.*;
+import static gt.com.model.propertiesApp.ConfigurationApp.INSERT_QUERY_PATIENT_ROOM;
+import static gt.com.model.propertiesApp.ConfigurationApp.*;
+
 
 public class PatientRoomDao implements IPatientRoomDao{
     private ConexionSingleton conection = ConexionSingleton.getInstance();

@@ -1,7 +1,7 @@
 package gt.com.model.service;
 
 import gt.com.model.dto.ResponsePatientDto;
-import gt.com.model.dto.ResponsePatientRoomDto;
+import gt.com.model.dto.*;
 
 import javax.servlet.http.HttpServletRequest;
 

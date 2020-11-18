@@ -10,7 +10,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static gt.com.model.configurationApp.MessagesErrorApp.*;
+import static gt.com.model.propertiesApp.ConfigurationApp.*;
+import static gt.com.model.propertiesApp.MessagesErrorApp.*;
 
 public class RoomService implements IRoomService{
 

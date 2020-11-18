@@ -1,18 +1,13 @@
 package gt.com.model.service;
 
 import gt.com.model.dao.*;
-import gt.com.model.dto.ResponsePatientDto;
 import gt.com.model.dto.ResponsePatientRoomDto;
-import gt.com.model.entity.PatientEntity;
 import gt.com.model.entity.PatientRoomEntity;
-
 import javax.servlet.http.HttpServletRequest;
 import java.sql.SQLException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
-import static gt.com.model.configurationApp.MessagesErrorApp.*;
+import static gt.com.model.propertiesApp.ConfigurationApp.*;
+import static gt.com.model.propertiesApp.MessagesErrorApp.*;
 
 public class PatientRoomService implements IPatientRoomService{
     @Override

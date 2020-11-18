@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.*;
 
-import static gt.com.model.configurationApp.ConfigurationApp.*;
+import static gt.com.model.propertiesApp.ConfigurationApp.*;
 
 /**
  * 
