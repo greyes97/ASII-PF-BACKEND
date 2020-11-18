@@ -66,7 +66,7 @@ usuario a su aplicación, informando el parámetro de código.
 	
 * Response 200 (application/json)
 
-	+
+	
 		"message": "success",
 		"responsePatient": 
 				{
