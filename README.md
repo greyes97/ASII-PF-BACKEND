@@ -71,9 +71,7 @@ usuario a su aplicación, informando el parámetro de código.
 		"responsePatient": 
 				{
 					"idPatient": 74,
-					
 					"dpi": "7878880005888",
-					
 					"nit": "878978978",
 					"birthday": "2020-11-17",
 					"gender": "m",
