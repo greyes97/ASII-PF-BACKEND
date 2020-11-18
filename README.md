@@ -66,32 +66,32 @@ localhost:8485/patient
 
 * Response 200 (application/json)
 
- {
-    "message": "success",
-    "responsePatient": [
-        {
-            "idPatient": 74,
-            "dpi": "7878880005888",
-            "nit": "878978978",
-            "birthday": "2020-11-17",
-            "gender": "m",
-            "fullName": "Angel",
-            "surName": "Garcia Reyes",
-            "address": "Guatemala",
-            "phone": 98956526,
-            "emergencyContact": 78545785,
-            "statePatient": false,
-            "statusWait": false
-        },
-        {
-            "idPatient": 75,
-            "dpi": "7878878458888",
-            "nit": "986556877",
-            "birthday": "2020-11-18",
-            "gender": "m",
-            "fullName": "Gustavo Fernando",
-            "surName": "Reyes Sicay",
-            "address": "Guatemala, Ciudad Vieja",
+ -{
+  -  "message": "success",
+   - "responsePatient": [
+    -    {
+     -       "idPatient": 74,
+      -      "dpi": "7878880005888",
+       -     "nit": "878978978",
+        -    "birthday": "2020-11-17",
+         -   "gender": "m",
+          -  "fullName": "Angel",
+           - "surName": "Garcia Reyes",
+           - "address": "Guatemala",
+            -"phone": 98956526,
+            -"emergencyContact": 78545785,
+            -"statePatient": false,
+            -"statusWait": false
+        -},
+        -{
+            -"idPatient": 75,
+            -"dpi": "7878878458888",
+            -"nit": "986556877",
+            -"birthday": "2020-11-18",
+            -"gender": "m",
+            -"fullName": "Gustavo Fernando",
+            -"surName": "Reyes Sicay",
+            -"address": "Guatemala, Ciudad Vieja",
             "phone": 95652354,
             "emergencyContact": 78784512,
             "statePatient": false,
