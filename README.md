@@ -68,7 +68,7 @@ usuario a su aplicación, informando el parámetro de código.
 
 
     "message": "success",
-    "responsePatient": [
+    "responsePatient": 
 			{
 				"idPatient": 74,
 				"dpi": "7878880005888",
