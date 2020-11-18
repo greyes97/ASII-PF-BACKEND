@@ -1,18 +1,15 @@
 package gt.com.controller;
 
-
 import gt.com.model.dto.ResponseRoomDto;
 import gt.com.model.service.IRoomService;
 import gt.com.model.service.RoomService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import static gt.com.model.propertiesApp.ConfigurationApp.*;
-import static gt.com.model.propertiesApp.MessagesErrorApp.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.SQLException;
-
+import static gt.com.model.propertiesApp.MessagesErrorApp.*;
 
 @RestController
 public class RoomController {
@@ -20,7 +17,7 @@ public class RoomController {
     @CrossOrigin( origins = "https://mymedicalcenter.netlify.app")
     @GetMapping(value = "/room", produces = "application/json")
     public ResponseRoomDto readPatient(HttpServletRequest request) throws SQLException {
-        IRoomService roomService = new RoomService();
+        IRoomService roomService = new RoomService();   
 
         try{
             if(!request.getParameter("type").isEmpty()){

@@ -7,24 +7,41 @@ public class PatientEntity {
     public PatientEntity() {
     }
 
-    private int id_user;
-    private int dpi;
+    private int idPatient;
+    private String dpi;
     private String nit;
-    private Date birthdate;
+    private Date birthday;
     private char gender;// F or M
     private String fullName;
     private String surName;
     private String address;
     private int phone;
     private int emergencyContact;
-    private boolean stateNull =false;
+    private boolean statePatient;
+    private boolean statusWait;
 
-    public boolean isStateNull() {
-        return stateNull;
+    public boolean isStatusWait() {
+        return statusWait;
     }
 
-    public void setStateNull(boolean stateNull) {
-        this.stateNull = stateNull;
+    public void setStatusWait(boolean statusWait) {
+        this.statusWait = statusWait;
+    }
+
+    public int getIdPatient() {
+        return idPatient;
+    }
+
+    public void setIdPatient(int idPatient) {
+        this.idPatient = idPatient;
+    }
+
+    public String getDpi() {
+        return dpi;
+    }
+
+    public void setDpi(String dpi) {
+        this.dpi = dpi;
     }
 
     public String getNit() {
@@ -35,36 +52,12 @@ public class PatientEntity {
         this.nit = nit;
     }
 
-    public int getEmergencyContact() {
-        return emergencyContact;
+    public Date getBirthday() {
+        return birthday;
     }
 
-    public void setEmergencyContact(int emergencyContact) {
-        this.emergencyContact = emergencyContact;
-    }
-
-    public int getId_user() {
-        return id_user;
-    }
-
-    public void setId_user(int id_user) {
-        this.id_user = id_user;
-    }
-
-    public int getDpi() {
-        return dpi;
-    }
-
-    public void setDpi(int dpi) {
-        this.dpi = dpi;
-    }
-
-    public Date getBirthdate() {
-        return birthdate;
-    }
-
-    public void setBirthdate(Date birthdate) {
-        this.birthdate = birthdate;
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 
     public char getGender() {
@@ -105,5 +98,21 @@ public class PatientEntity {
 
     public void setPhone(int phone) {
         this.phone = phone;
+    }
+
+    public int getEmergencyContact() {
+        return emergencyContact;
+    }
+
+    public void setEmergencyContact(int emergencyContact) {
+        this.emergencyContact = emergencyContact;
+    }
+
+    public boolean isStatePatient() {
+        return statePatient;
+    }
+
+    public void setStatePatient(boolean statePatient) {
+        this.statePatient = statePatient;
     }
 }

@@ -1,4 +1,4 @@
-package gt.com.control;
+package gt.com.controller;
 
 import gt.com.model.dto.ResponsePatientRoomDto;
 import gt.com.model.service.IPatientRoomService;
@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 public class PatientRoomController {
 
-    @CrossOrigin( origins = "http://localhost:3333")
+    @CrossOrigin( origins = "https://mymedicalcenter.netlify.app")
     @PostMapping(value = "/patientRoom", produces = "application/json")
     public ResponsePatientRoomDto savePatientRoom(HttpServletRequest request) throws Exception {
         IPatientRoomService patientRoomService = new PatientRoomService();
@@ -21,7 +21,7 @@ public class PatientRoomController {
         return patientRoomService.savePatientRoom(request);
     }
 
-    @CrossOrigin( origins = "http://localhost:3333")
+    @CrossOrigin( origins = "https://mymedicalcenter.netlify.app")
     @PutMapping(value = "/patientRoom", produces = "application/json")
     public ResponsePatientRoomDto updatePatientRoom(HttpServletRequest request) throws Exception {
         IPatientRoomService patientRoomService = new PatientRoomService();

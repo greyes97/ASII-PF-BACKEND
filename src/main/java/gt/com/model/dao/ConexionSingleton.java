@@ -20,19 +20,15 @@ public class ConexionSingleton {
     }
 
 
-
-
     public void abrirConexion() {
 
         try {
             String jdbc = "com.mysql.cj.jdbc.Driver";
             Class.forName(jdbc);
-            String urlConexion = "jdbc:mysql://localhost:3306/hopital_as2_pf?serverTimezone=UTC";
-            String usuario = "root";
-            String contra = "Silver0cho";
+            String urlConexion = "jdbc:mysql://bhuisxvi6lxwrcnlbd5f-mysql.services.clever-cloud.com:3306/bhuisxvi6lxwrcnlbd5f";
+            String usuario = "uvarzjtbbn8qx9fb";
+            String contra = "3ol1tm2JVXXrCeaTpKLW";
             conexionBD = DriverManager.getConnection(urlConexion, usuario, contra);
-            System.out.println("Conexion eexitosa");
-
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -49,7 +45,7 @@ public class ConexionSingleton {
         }
         catch (Exception ex)
         {
-            //JOptionPane.showMessageDialog(null,ex.getMessage(),"CONEXION FALLIDA ",JOptionPane.ERROR_MESSAGE);
+
         }
     }
 

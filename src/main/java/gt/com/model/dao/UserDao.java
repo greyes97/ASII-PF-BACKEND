@@ -1,12 +1,13 @@
 package gt.com.model.dao;
 
-
 import gt.com.model.entity.UserEntity;
 import gt.com.model.propertiesApp.ConfigurationApp;
 
+import static gt.com.model.propertiesApp.ConfigurationApp.*;
+import static gt.com.model.propertiesApp.MessagesErrorApp.*;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 
 
 public class UserDao implements IUserDao {
@@ -19,11 +20,8 @@ public class UserDao implements IUserDao {
         ConexionSingleton conexion = ConexionSingleton.getInstance();
 
         ConfigurationApp config = new ConfigurationApp();
-        String emailP = email;
-        String passwordP = password;
 
-
-        String query = String.format("select id_user,username,password,role,enable,email,users.key from users where email = '%s' and password = '%s';",emailP,passwordP );
+        String query = String.format("select idUser,userName,password,role,email from users where email = '%s' and password = '%s';",email,password);
         UserEntity entity = new UserEntity();
         try {
             conexion.abrirConexion();
@@ -32,13 +30,11 @@ public class UserDao implements IUserDao {
 
 
             while (rs.next()) {
-                entity.setIdUser(rs.getInt("id_user"));
-                entity.setFullName(rs.getString("username"));
+                entity.setIdUser(rs.getInt("idUser"));
+                entity.setFullName(rs.getString("userName"));
                 entity.setPassword(rs.getString("password"));
                 entity.setRole(rs.getString("role"));
-                entity.setEnable(rs.getInt("enable"));
                 entity.setEmail(rs.getString("email"));
-                entity.setKey(rs.getString("key"));
             }
 
         } catch (SQLException e) {

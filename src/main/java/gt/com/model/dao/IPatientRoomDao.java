@@ -1,7 +1,7 @@
 package gt.com.model.dao;
 
 
-import gt.com.model.dto.ResponseDto;
+import gt.com.model.dto.ResponseRoomDto;
 import gt.com.model.entity.PatientRoomEntity;
 import gt.com.model.entity.RoomEntity;
 

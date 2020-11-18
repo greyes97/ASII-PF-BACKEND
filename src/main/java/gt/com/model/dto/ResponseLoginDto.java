@@ -1,22 +1,24 @@
 package gt.com.model.dto;
 
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import gt.com.model.entity.UserEntity;
-
 public class ResponseLoginDto {
 
-    private String errorMessage;
+    private String message;
     private Object jsonResponse;
     private boolean statusLogin;
+    private int typeMessage;
 
-    public ResponseLoginDto(String errorMessage) {
-        this.errorMessage = errorMessage;
+
+    public ResponseLoginDto(String message, boolean statusLogin, int typeMessage) {
+        this.message = message;
+        this.statusLogin = statusLogin;
+        this.typeMessage = typeMessage;
     }
 
-    public ResponseLoginDto(Object jsonResponse, boolean statusLogin) {
+    public ResponseLoginDto(String message, Object jsonResponse, boolean statusLogin, int typeMessage) {
+        this.message = message;
         this.jsonResponse = jsonResponse;
         this.statusLogin = statusLogin;
+        this.typeMessage = typeMessage;
     }
 
     public boolean isStatusLogin() {
@@ -26,11 +28,11 @@ public class ResponseLoginDto {
         this.statusLogin = statusLogin;
     }
     public String getErrorMessage() {
-        return errorMessage;
+        return message;
     }
 
     public void setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+        this.message = errorMessage;
     }
 
     public Object getJsonResponse() {

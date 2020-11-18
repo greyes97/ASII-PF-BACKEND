@@ -1,6 +1,5 @@
 package gt.com.model.entity;
 
-import java.util.*;
 
 public class UserEntity {
 
@@ -12,9 +11,7 @@ public class UserEntity {
     private String fullName;
     private String password;
     private String role;
-    private int enable;
     private String email;
-    private String key;
 
     public int getIdUser() {
         return idUser;
@@ -48,14 +45,6 @@ public class UserEntity {
         this.role = role;
     }
 
-    public int getEnable() {
-        return enable;
-    }
-
-    public void setEnable(int enable) {
-        this.enable = enable;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -64,11 +53,4 @@ public class UserEntity {
         this.email = email;
     }
 
-    public String getKey() {
-        return key;
-    }
-
-    public void setKey(String key) {
-        this.key = key;
-    }
 }

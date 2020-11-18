@@ -13,7 +13,7 @@ public interface IAppointmentsDao {
     public int deleteAppointment(int idAppointment) throws SQLException;
     public List<AppointmentEntity> getAppointments() throws SQLException;
     public AppointmentEntity getAppointmentById(int idAppointmet) throws SQLException;
-    public List<AppointmentEntity> getAppintmentsByPatient(long searchParam) throws SQLException;
+    public List<AppointmentEntity> getAppointmentsByPatient(long searchParam) throws SQLException;
     public List<AppointmentEntity> getAppointmentsByNamePatient(String fullName, String surName) throws SQLException;
 
 }

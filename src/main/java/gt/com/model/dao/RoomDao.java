@@ -10,6 +10,7 @@ import java.sql.SQLException;
 import java.util.*;
 
 import static gt.com.model.propertiesApp.ConfigurationApp.*;
+import static gt.com.model.propertiesApp.MessagesErrorApp.*;
 
 /**
  * 

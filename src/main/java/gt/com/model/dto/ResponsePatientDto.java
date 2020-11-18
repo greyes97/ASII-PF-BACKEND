@@ -1,44 +1,48 @@
 package gt.com.model.dto;
 
-import com.google.gson.JsonObject;
 import gt.com.model.entity.PatientEntity;
 
 import java.util.List;
 
 public class ResponsePatientDto{
 
-    private String errorMessage;
+    private String message;
     private List<PatientEntity> responsePatient;
-    private boolean statusPatient;
+    private boolean status;
     private Object responsePatientObject;
+    private int typeMessage; // 1 succes   2 warning  3 fail
 
     //constructor para getpatients
 
-    public ResponsePatientDto(List<PatientEntity> responsePatient, boolean statusPatient) {
+    public ResponsePatientDto(String message, List<PatientEntity> responsePatient, boolean statusPatient, int typeMessage) {
+        this.message = message;
         this.responsePatient = responsePatient;
-        this.statusPatient = statusPatient;
+        this.status = statusPatient;
+        this.typeMessage = typeMessage;
     }
 
-    //constructor para errormessage
 
-    public ResponsePatientDto(String errorMessage) {
-        this.errorMessage = errorMessage;
+    //constructor para getPatientById
+
+    public ResponsePatientDto(String message, boolean statusPatient, Object responsePatientObject, int typeMessage) {
+        this.message = message;
+        this.status = statusPatient;
+        this.responsePatientObject = responsePatientObject;
+        this.typeMessage = typeMessage;
     }
 
-    //constructor para savepatient and delete
 
-    public ResponsePatientDto(boolean statusPatient) {
-        this.statusPatient = statusPatient;
+    //constructor para  savePatient UpdatePatient DeletePaient
+
+    public ResponsePatientDto(String message, boolean statusPatient, int typeMessage) {
+        this.message = message;
+        this.status = statusPatient;
+        this.typeMessage = typeMessage;
     }
 
-    //constructor para updatepatient
-
-    public ResponsePatientDto(boolean statusPatient, Object responsePatientObject) {
-        this.statusPatient = statusPatient;
+    public ResponsePatientDto(Object responsePatientObject) {
         this.responsePatientObject = responsePatientObject;
     }
-
-
     //getters and setters
 
     public List<PatientEntity> getResponsePatient() {
@@ -50,11 +54,11 @@ public class ResponsePatientDto{
     }
 
     public String getErrorMessage() {
-        return errorMessage;
+        return message;
     }
 
     public void setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+        this.message = errorMessage;
     }
 
 
