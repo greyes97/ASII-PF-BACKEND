@@ -28,18 +28,13 @@ Las solicitudes de la API deben seguir los estándares siguientes:
 | DELETE  |Elimina un registro del sistema. |
 
 
-## Manejo de Respuestas
+## Manejo de Respuestas y errores.
 
 | Código| Descripción |
 | ------------- | ------------- |
-| 200 | Solicitud ejecutada con éxito. |
-| 400  | Los errores de validación o los campos informados no existen en el sistema. |
-| 401  | Datos de acceso no válidos. |
-| 404 |Registro no encontrado. |
-| 405 |Método no implementado. |
-| 410 | El registro buscado se ha eliminado del sistema y ya no está disponible. |
-| 420 |Los datos reportados están fuera del alcance definido para el campo. |
-| 422 |Se alcanzó el número máximo de solicitudes. (espera unos segundos y vuelve a intentarlo) |
+| 1 | Solicitud ejecutada con éxito. |
+| 2 | Los errores de validación o los campos informados no existen en el sistema. |
+| 3 | Error de consulta en la base de datos. |
 
 ## Listar Datos
 
