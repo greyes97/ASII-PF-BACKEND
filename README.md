@@ -13,5 +13,16 @@ Recursos disponibles que proporciona la API:
 * Gestion de citas medicas.
 * Control de habitaciones para los pacientes internados en la clinica.
 * Historial medico por paciente.
-* REcetar medicamentos.
+* Recetar medicamentos.
 
+
+## Metodos
+
+Las solicitudes de la API deben seguir los estándares siguientes:
+
+| Metodo | Descripcion |
+| ------------- | ------------- |
+| GET | Devuelve información de uno o más registros. |
+| POST  | Se utiliza para crear un nuevo registro. |
+| PUT  | Actualiza los datos de un registro o cambia su estado. |
+| DELETE  |Elimina un registro del sistema. |
