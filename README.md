@@ -61,9 +61,9 @@ usuario a su aplicación, informando el parámetro de código.
 ### Listar {GET}
 
 * Request (application/json)
-
-	- localhost:8485/patient=74
-
+	''	
+		localhost:8485/patient=74
+	''	
 * Response 200 (application/json)
 
 
