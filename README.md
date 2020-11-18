@@ -58,6 +58,10 @@ Si el usuario autoriza el acceso, nuestro sistema utilizará redirect_uri para r
 usuario a su aplicación, informando el parámetro de código.
 
 
+### Listar {GET}
+
+* Request (application/json)
+
 
 
 
