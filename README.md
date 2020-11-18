@@ -83,4 +83,19 @@ usuario a su aplicación, informando el parámetro de código.
 					"statePatient": false,
 					"statusWait": false
 				},
-        
+				
+				
+				
+				
+## Construido con
+	* MAVEN
+	* JAVA 8
+	* SPRING BOOT FRAMEWORK
+	
+	
+## Autores
+
+		* Eddy Fernando Sicajau.
+		* Fernando Alexander Sicay
+		* Gustavo Reyes
+		* Angel Garcia
