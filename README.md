@@ -57,12 +57,12 @@ Para utilizar el Sistema necesita un usuario generardo por el adminitrador del m
 Si el usuario autoriza el acceso, nuestro sistema utilizará redirect_uri para redirigir al 
 usuario a su aplicación, informando el parámetro de código.
 
-
+## Ejemplo metodo Get.
 ### Listar {GET}
 
 * Request (application/json)
 
-(localhost:8485/patient)
+"localhost:8485/patient"
 
 
 
