@@ -6,7 +6,6 @@ import com.google.gson.JsonObject;
 import gt.com.model.dao.IUserDao;
 import gt.com.model.dao.UserDao;
 import gt.com.model.entity.UserEntity;
-import static gt.com.model.propertiesApp.ConfigurationApp.*;
 import static gt.com.model.propertiesApp.MessagesErrorApp.*;
 import gt.com.model.dto.ResponseLoginDto;
 
@@ -16,6 +15,11 @@ import java.sql.SQLException;
 
 public class UserService implements IUserService {
 
+    /***
+     * this method validates if the user have access to the application
+     * @param request this param contains the email and password
+     * @return the ResponseLoginDto function is, give information to front end.
+     */
     @Override
     public ResponseLoginDto validateUser(HttpServletRequest request) {
         JsonObject respuesta = new JsonObject();
@@ -33,14 +37,10 @@ public class UserService implements IUserService {
         if (user != null) {
             if (email.equals(user.getEmail()) && password.equals(user.getPassword())) {
 
-                HttpSession session = request.getSession();
                 respuesta.addProperty("userName", user.getFullName());
                 respuesta.addProperty("idUser", user.getIdUser());
                 respuesta.addProperty("role",user.getRole());
 
-                session.setAttribute("status","true");
-                session.setAttribute("userName",user.getFullName());
-                session.setAttribute("idUser",user.getIdUser());
                 return new ResponseLoginDto(SUCCESS,respuesta,true,1);
 
             } else {

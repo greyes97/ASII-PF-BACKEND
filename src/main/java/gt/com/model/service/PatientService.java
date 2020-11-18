@@ -2,14 +2,11 @@ package gt.com.model.service;
 
 
 import gt.com.model.dao.*;
-import gt.com.model.dto.ResponsePatientRoomDto;
 import gt.com.model.entity.PatientEntity;
 import gt.com.model.dto.ResponsePatientDto;
 import gt.com.model.entity.RoomEntity;
-
 import javax.servlet.http.HttpServletRequest;
 import static gt.com.model.propertiesApp.MessagesErrorApp.*;
-import static gt.com.model.propertiesApp.ConfigurationApp.*;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -19,6 +16,13 @@ import java.util.List;
 
 public class PatientService implements IPatientService{
 
+
+    /***
+     * this method let us choice one get operation by default "get all patients records in the data base"
+     * this method will be reformated in the future whit clean code
+     * @param resq this represents all the parameters requested by the frontend
+     * @return this param returns a message, type, status and the data base information
+     */
     @Override
     public ResponsePatientDto getPatients(HttpServletRequest resq) {
 
@@ -127,6 +131,11 @@ public class PatientService implements IPatientService{
 
     }
 
+    /***
+     * the function of this method is determinate the information quality for being saved in the data base
+     * @param request give us the necesary information for a new patient recorded
+     * @return this param returns a message, type, and status
+     */
     @Override
     public ResponsePatientDto savePatient(HttpServletRequest request) {
 
@@ -208,6 +217,11 @@ public class PatientService implements IPatientService{
 
     }
 
+    /**
+     * the funtion is delete a register in the data base, this method need the id parameter
+     * @param idPatient represent what register will be removed
+     * @return return a confiramtion of the operations
+     */
     @Override
     public ResponsePatientDto deletePatient(int idPatient) {
         IPatientDao patientDao = new PatientDao();
@@ -224,6 +238,11 @@ public class PatientService implements IPatientService{
         }
     }
 
+    /**
+     * this funtionality let us update the record information in the data base
+     * @param request represent what register will be updated
+     * @return return a confiramtion if the operation fail o success
+     */
     @Override
     public ResponsePatientDto updatePatient(HttpServletRequest request) {
 
@@ -301,6 +320,12 @@ public class PatientService implements IPatientService{
 
         }
 
+
+    /**
+     * this method let us get a specific patient information
+      * @param id represent what patient recorded is requesting by the front end
+     * @return give all patient data registred in the data base
+     */
     @Override
     public ResponsePatientDto getPatientById(int id) {
 
@@ -326,6 +351,8 @@ public class PatientService implements IPatientService{
 
     }
 
+
+    
     @Override
     public ResponsePatientDto updateStatusPatient(HttpServletRequest request) throws Exception {
         IPatientDao patientDao = new PatientDao();

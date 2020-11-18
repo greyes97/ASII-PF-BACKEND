@@ -16,6 +16,11 @@ import static gt.com.model.propertiesApp.MessagesErrorApp.*;
 public class GuestAppointmentDao implements IGuestAppointmentDao{
     ConexionSingleton conection = ConexionSingleton.getInstance();
 
+    /***
+     * this method returns all the recorded Guest Patients in the database
+     * @return returns all guest patients recorded in list data structure
+     * @throws SQLException
+     */
     @Override
     public List<GuestAppointmentEntity> getGuestAppointments() throws SQLException {
 
@@ -50,6 +55,13 @@ public class GuestAppointmentDao implements IGuestAppointmentDao{
     }
 
 
+    /***
+     * The objective of this method is search all the Appointment of a guest patient in the database
+     * @param fullName represent the name of  guest patients
+     * @param surName represent the last name of guest patients
+     * @return this method return a list of appointment in the data base
+     * @throws SQLException
+     */
     @Override
     public List<GuestAppointmentEntity> searchGuestAppointmentByName(String fullName, String surName) throws SQLException {
         List<GuestAppointmentEntity> guestAppointmentEntities = new ArrayList<>();
@@ -81,7 +93,12 @@ public class GuestAppointmentDao implements IGuestAppointmentDao{
         return guestAppointmentEntities;
     }
 
-
+    /***
+     * the fuctionality is remove the record in of a specific patient in the data base
+     * @param idGuestAppointment this param represents the specific appointment for removing
+     * @return this param represent if the funtion was successed or failed
+     * @throws SQLException
+     */
     @Override
     public int deleteGuestAppointment(int idGuestAppointment) throws SQLException {
         PreparedStatement parametro;
@@ -103,6 +120,12 @@ public class GuestAppointmentDao implements IGuestAppointmentDao{
         return 1;
     }
 
+    /***
+     * update a guest appointment record in the data base
+     * @param guestAppointmentEntity
+     * @return just for identified the success or fail
+     * @throws SQLException
+     */
     @Override
     public int updateGuestAppointent(GuestAppointmentEntity guestAppointmentEntity) throws SQLException {
         PreparedStatement parametro;
@@ -133,6 +156,12 @@ public class GuestAppointmentDao implements IGuestAppointmentDao{
         return 1;
     }
 
+    /***
+     * save a new record in the data base for a guest appintment
+     * @param guestAppointmentEntity
+     * @return just for identified the success or fail
+     * @throws SQLException
+     */
     @Override
     public boolean saveGuestAppointment(GuestAppointmentEntity guestAppointmentEntity) throws SQLException {
         boolean rs;
