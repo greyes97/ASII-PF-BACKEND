@@ -62,7 +62,7 @@ usuario a su aplicación, informando el parámetro de código.
 
 * Request (application/json)
 
-> localhost:8485/patient
+(localhost:8485/patient)
 
 
 
