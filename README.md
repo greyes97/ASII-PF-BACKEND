@@ -1,26 +1,26 @@
 # Clinic API
 
-Clinic disponibiliza una API REST que permite la getsion de la informacion para clinicas medicas.
-Permite la creaion de citas medicas, gestion de pacientes, hitorial mdedico de los pacientes, y asignacion 
+Clinic disponibiliza una API REST, que permite la gestión de la información para clínicas medicas.
+Permite la creación de citas medicas, gestión de pacientes, historial médico de los pacientes y asignación 
 de habitaciones a los pacientes.
 
-Las preguntas y solicitudes relacionadas con el acceso a la API deben enviarse al correo electrónico 
+Las preguntas y solicitudes relacionadas con el acceso a la API deben enviarse al correo electrónico: 
 proyectosoftwareumg@gmail.com.
 
 Recursos disponibles que proporciona la API:
 
-* Gestion de la infromacion de los pacientes.
-* Gestion de citas medicas.
-* Control de habitaciones para los pacientes internados en la clinica.
-* Historial medico por paciente.
+* Gestión de la infromación de los pacientes.
+* Gestión de citas medicas.
+* Control de habitaciones para los pacientes internados en la clínica.
+* Historial médico por paciente.
 * Recetar medicamentos.
 
 
-## Metodos
+## Métodos
 
 Las solicitudes de la API deben seguir los estándares siguientes:
 
-| Metodo | Descripcion |
+| Método | Descripción |
 | ------------- | ------------- |
 | GET | Devuelve información de uno o más registros. |
 | POST  | Se utiliza para crear un nuevo registro. |
@@ -30,7 +30,7 @@ Las solicitudes de la API deben seguir los estándares siguientes:
 
 ## Manejo de Respuestas
 
-| codigo| Descripcion |
+| Código| Descripción |
 | ------------- | ------------- |
 | 200 | Solicitud ejecutada con éxito. |
 | 400  | Los errores de validación o los campos informados no existen en el sistema. |
@@ -45,14 +45,14 @@ Las solicitudes de la API deben seguir los estándares siguientes:
 
 Las acciones de la lista permiten el envío de los siguientes parámetros:
 
-| Parametro| Descripcion |
+| Parámetro| Descripción |
 | ------------- | ------------- |
 | Filtro | Filtra los datos por el valor ingresado. |
 
 
-## Autenticacion
+## Autenticación
 
-Para utilizar el Sistema necesita un usuario generardo por el adminitrador del mismo.
+Para utilizar el Sistema, necesita un usuario generardo por el adminitrador del mismo.
 
 Si el usuario autoriza el acceso, nuestro sistema utilizará redirect_uri para redirigir al 
 usuario a su aplicación, informando el parámetro de código.
