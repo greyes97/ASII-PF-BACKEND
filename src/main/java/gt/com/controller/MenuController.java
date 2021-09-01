@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 public class MenuController {
 
-    @CrossOrigin( origins = "https://mymedicalcenter.netlify.app")
+    @CrossOrigin( origins = "http://localhost:3333")
     @GetMapping(value = "/menu", produces = "application/json;charset=UTF-8")
     public ResponseMenuDto loginControl(HttpServletRequest request) throws Exception {
         IMenuService menuService = new MenuService();

@@ -1,11 +1,10 @@
-package gt.com.hospital;
+package gt.com;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"gt.com.controller"})
 public class HospitalApplication {
 
     public static void main(String[] args) {

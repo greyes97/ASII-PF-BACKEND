@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 public class PatientController {
 
-    @CrossOrigin( origins = "https://mymedicalcenter.netlify.app")
+    @CrossOrigin( origins = "http://localhost:3333")
     @GetMapping(value = "/patient", produces = "application/json")
     public ResponsePatientDto readPatient(HttpServletRequest request){
         IPatientService patientService = new PatientService();
@@ -17,7 +17,7 @@ public class PatientController {
         return patientService.getPatients(request);
     }
 
-    @CrossOrigin( origins = "https://mymedicalcenter.netlify.app")
+    @CrossOrigin( origins = "http://localhost:3333")
     @PostMapping(value = "/patient", produces = "application/json")
     public ResponsePatientDto savePatient(HttpServletRequest request) {
         IPatientService patientService = new PatientService();
@@ -30,7 +30,7 @@ public class PatientController {
 
     }
 
-    @CrossOrigin( origins = "https://mymedicalcenter.netlify.app")
+    @CrossOrigin( origins = "http://localhost:3333")
     @PutMapping(value = "/patient", produces = "application/json")
     public ResponsePatientDto updatePatientInfo(HttpServletRequest request) {
         IPatientService patientService = new PatientService();
@@ -38,7 +38,7 @@ public class PatientController {
        return patientService.updatePatient(request);
     }
 
-    @CrossOrigin( origins = "https://mymedicalcenter.netlify.app")
+    @CrossOrigin( origins = "http://localhost:3333")
     @DeleteMapping(value = "/patient", produces = "application/json")
     public ResponsePatientDto deletePatientInfo(HttpServletRequest request){
         IPatientService patientService = new PatientService();

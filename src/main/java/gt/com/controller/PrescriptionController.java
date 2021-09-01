@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 public class PrescriptionController {
 
-    @CrossOrigin( origins = "https://mymedicalcenter.netlify.app")
+    @CrossOrigin( origins = "http://localhost:3333")
     @GetMapping(value = "/prescription", produces = "application/json")
     public ResponseGenericDto getPrescriptions(HttpServletRequest request){
         IPrescriptionService prescriptionService = new PrescriptionService();
@@ -19,7 +19,7 @@ public class PrescriptionController {
         return prescriptionService.getPrescriptions(request);
     }
 
-    @CrossOrigin( origins = "https://mymedicalcenter.netlify.app")
+    @CrossOrigin( origins = "http://localhost:3333")
     @PostMapping(value = "/prescription", produces = "application/json")
     public ResponseGenericDto savePrescriptions(HttpServletRequest request){
         IPrescriptionService prescriptionService = new PrescriptionService();

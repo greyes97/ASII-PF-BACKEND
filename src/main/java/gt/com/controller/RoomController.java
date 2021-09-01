@@ -14,7 +14,7 @@ import static gt.com.model.propertiesApp.MessagesErrorApp.*;
 @RestController
 public class RoomController {
 
-    @CrossOrigin( origins = "https://mymedicalcenter.netlify.app")
+    @CrossOrigin( origins = "http://localhost:3333")
     @GetMapping(value = "/room", produces = "application/json")
     public ResponseRoomDto readPatient(HttpServletRequest request) throws SQLException {
         IRoomService roomService = new RoomService();   

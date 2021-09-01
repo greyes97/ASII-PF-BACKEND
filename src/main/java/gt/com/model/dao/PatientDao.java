@@ -175,7 +175,7 @@ public class PatientDao implements IPatientDao {
         try{
             conection.abrirConexion();
 
-            String query2 = "select idPatient,dpi,nit,birthday,gender,fullName,surName,address,phone,emergencyContact,status,statusWait from patients where (status = '"+Boolean.toString(status)+"' and ((fullName like '%"+fullName+"%' and surName like '%"+surName+"%') || (fullName like'%"+surName+"%' and surName like '%"+fullName+"%')||(fullName like '%"+fullName+" "+surName+"%')||(surName like '%"+surName+" "+fullName+"%')||(idPatient like '%"+fullName+"%')||(dpi like '%"+fullName+"%')));";
+            String query2 = "select idPatient,dpi,nit,birthday,gender,fullName,surName,address,phone,emergencyContact,status,statusWait from patients where (((fullName like '%"+fullName+"%' and surName like '%"+surName+"%') || (fullName like'%"+surName+"%' and surName like '%"+fullName+"%')||(fullName like '%"+fullName+" "+surName+"%')||(surName like '%"+surName+" "+fullName+"%')||(idPatient like '%"+fullName+"%')||(dpi like '%"+fullName+"%')));";
             ResultSet rs = conection.conexionBD.createStatement().executeQuery(query2);
             getAtributtesPatient(patients, rs);
 

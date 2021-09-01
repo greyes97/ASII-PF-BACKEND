@@ -13,7 +13,7 @@ import java.sql.SQLException;
 @RestController
 public class MedicalHistoryController {
 
-    @CrossOrigin( origins = "https://mymedicalcenter.netlify.app")
+    @CrossOrigin( origins = "http://localhost:3333")
     @GetMapping(value = "/medicalHistory", produces = "application/json")
     public ResponseGenericDto getHistoryByPatient(HttpServletRequest request) throws SQLException {
         IMedicalHistoryService medicalHistory = new MedicalHistoryService();

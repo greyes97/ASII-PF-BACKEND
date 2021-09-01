@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 public class GuestAppointmentController {
 
-    @CrossOrigin( origins = "https://mymedicalcenter.netlify.app")
+    @CrossOrigin( origins = "http://localhost:3333")
     @GetMapping(value = "/guestAppointment", produces = "application/json")
     public ResponseGenericDto getGuestAppointments(HttpServletRequest request){
         IGuestAppointmentService guestAppointmentService = new GuestAppointmentService();
@@ -22,7 +22,7 @@ public class GuestAppointmentController {
             }
     }
 
-    @CrossOrigin( origins = "https://mymedicalcenter.netlify.app")
+    @CrossOrigin( origins = "http://localhost:3333")
     @DeleteMapping(value = "/guestAppointment", produces = "application/json")
     public ResponseGenericDto deleteGuestAppointments(HttpServletRequest request){
         IGuestAppointmentService guestAppointmentService = new GuestAppointmentService();
@@ -34,7 +34,7 @@ public class GuestAppointmentController {
         }
     }
 
-    @CrossOrigin( origins = "https://mymedicalcenter.netlify.app")
+    @CrossOrigin( origins = "http://localhost:3333")
     @PutMapping(value = "/guestAppointment", produces = "application/json")
     public ResponseGenericDto updateGuestAppointments(HttpServletRequest request){
         IGuestAppointmentService guestAppointmentService = new GuestAppointmentService();
@@ -46,7 +46,7 @@ public class GuestAppointmentController {
         }
     }
 
-    @CrossOrigin( origins = "https://mymedicalcenter.netlify.app")
+    @CrossOrigin( origins = "http://localhost:3333")
     @PostMapping(value = "/guestAppointment", produces = "application/json")
     public ResponseGenericDto saveGuestAppointments(HttpServletRequest request){
         IGuestAppointmentService guestAppointmentService = new GuestAppointmentService();
